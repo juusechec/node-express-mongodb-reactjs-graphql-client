@@ -1,6 +1,6 @@
 const config = {
-  graphqlEndpoint: 'http://localhost:3001/graphql',
-  bioEndpoint: 'http://localhost:3001/bio',
-  postEndpoint: 'http://localhost:3001/proxy/post',
+  graphqlEndpoint: 'https://torre-jorge-app.herokuapp.com/graphql',
+  bioEndpoint: 'https://torre-jorge-app.herokuapp.com/bio',
+  postEndpoint: 'https://torre-jorge-app.herokuapp.com/proxy/post',
 };
 export default config;
