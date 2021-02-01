@@ -47,7 +47,7 @@ class Oportunities extends Component {
   }
 
   getKeywords(summaryOfBio) {
-    const url = "http://localhost:3001/extract";
+    const url = config.extractEndpoint;
     const body = {
       data: summaryOfBio,
       word_qty: 10,
