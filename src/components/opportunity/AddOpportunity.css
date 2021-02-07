@@ -13,6 +13,9 @@
   font-size: 24px;
   cursor: pointer;
 }
+.star:hover {
+  border-bottom: 0.7em solid rgb(255, 106, 0);
+}
 .star:before,
 .star:after {
   content: "";
@@ -30,7 +33,10 @@
 .star:after {
   transform: rotate(35deg);
 }
-
+.star:hover:after,
+.star:hover:before {
+  border-bottom: 0.7em solid rgb(255, 106, 0);
+}
 .text {
   width: 81%;
   display: inline-block;
