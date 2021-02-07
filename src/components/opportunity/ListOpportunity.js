@@ -34,31 +34,34 @@ class ListOpportunity extends Component {
                   <table className="table table-stripe">
                     <thead>
                       <tr>
-                        <th></th>
                         <th>User ID</th>
                         <th>Opportunity ID</th>
                         <th>Comment</th>
+                        <th></th>
                       </tr>
                     </thead>
                     <tbody>
                       {data.savedOpportunities.map(
                         (savedOpportunity, index) => (
                           <tr key={index}>
-                            <td>
-                              <Link to={`/show/${savedOpportunity._id}`}>
-                                See
-                              </Link>
-                            </td>
                             <td>{savedOpportunity.id_user}</td>
                             <td>{savedOpportunity.id_opportunity}</td>
                             <td>{savedOpportunity.comment}</td>
+                            <td>
+                              <Link
+                                className="btn btn-primary"
+                                to={`/show/${savedOpportunity._id}`}
+                              >
+                                Details
+                              </Link>
+                            </td>
                           </tr>
                         )
                       )}
                     </tbody>
                   </table>
                 </div>
-                <Link to="/" className="btn btn-primary">
+                <Link to="/" className="btn btn-success">
                   Query other Bio
                 </Link>
               </div>
