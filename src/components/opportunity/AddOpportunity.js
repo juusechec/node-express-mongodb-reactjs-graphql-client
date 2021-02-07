@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import gql from "graphql-tag";
 import { Mutation } from "react-apollo";
 import config from "../../config";
-import "./Oportunities.css";
+import "./AddOpportunity.css";
 import { Link } from "react-router-dom";
 
 const ADD_SAVED_OPPORTUNITY = gql`
@@ -21,7 +21,7 @@ const ADD_SAVED_OPPORTUNITY = gql`
   }
 `;
 
-class Oportunities extends Component {
+class AddOpportunity extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -193,4 +193,4 @@ class Oportunities extends Component {
   }
 }
 
-export default Oportunities;
+export default AddOpportunity;

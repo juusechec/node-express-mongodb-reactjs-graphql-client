@@ -32,7 +32,7 @@ const UPDATE_SAVED_OPPORTUNITY = gql`
   }
 `;
 
-class Edit extends Component {
+class EditOpportunity extends Component {
   render() {
     let id_user, id_opportunity, comment;
     return (
@@ -135,4 +135,4 @@ class Edit extends Component {
   }
 }
 
-export default Edit;
+export default EditOpportunity;

@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import "../App.css";
 import gql from "graphql-tag";
 import { Query, Mutation } from "react-apollo";
 
@@ -23,7 +22,7 @@ const DELETE_SAVED_OPPORTUNITY = gql`
   }
 `;
 
-class Show extends Component {
+class ShowOpportunity extends Component {
   render() {
     return (
       <Query
@@ -92,4 +91,4 @@ class Show extends Component {
   }
 }
 
-export default Show;
+export default ShowOpportunity;

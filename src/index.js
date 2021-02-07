@@ -3,17 +3,16 @@ import ReactDOM from 'react-dom';
 import ApolloClient from 'apollo-boost';
 import { ApolloProvider } from 'react-apollo';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
+
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
-import App from './App';
 import * as serviceWorker from './serviceWorker';
-import Edit from './components/Edit';
-import Create from './components/Create';
-import Show from './components/Show';
-import List from './components/List';
-import Biosearch from './components/biosearch/Biosearch';
 import config from './config';
-import Oportunities from './components/oportunities/Oportunities';
+import EditOpportunity from './components/opportunity/EditOpportunity';
+import ShowOpportunity from './components/opportunity/ShowOpportunity';
+import ListOpportunity from './components/opportunity/ListOpportunity';
+import AddOpportunity from './components/opportunity/AddOpportunity';
+import Biosearch from './components/biosearch/Biosearch';
 
 const client = new ApolloClient({ uri: config.graphqlEndpoint });
 
@@ -22,12 +21,10 @@ ReactDOM.render(
         <Router>
             <div>
                 <Route exact path='/' component={Biosearch} />
-                <Route path='/list' component={List} />
-                <Route path='/app' component={App} />
-                <Route path='/edit/:id' component={Edit} />
-                <Route path='/create' component={Create} />
-                <Route path='/show/:id' component={Show} />
-                <Route path='/opportunities/:id' component={Oportunities} />
+                <Route path='/list' component={ListOpportunity} />
+                <Route path='/edit/:id' component={EditOpportunity} />
+                <Route path='/show/:id' component={ShowOpportunity} />
+                <Route path='/opportunities/:id_user' component={AddOpportunity} />
             </div>
         </Router>
     </ApolloProvider>,

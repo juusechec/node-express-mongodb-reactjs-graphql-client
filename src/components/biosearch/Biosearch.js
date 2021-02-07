@@ -35,6 +35,12 @@ class Biosearch extends Component {
             error: null,
           });
         }
+      })
+      .catch((error) => {
+        console.log("error", error);
+        alert(
+          "Something was wrong with service, please contact with the admin."
+        );
       });
   }
 
@@ -72,7 +78,11 @@ class Biosearch extends Component {
                     onChange={this.handleChange}
                   />
                 </label>
-                <input type="submit" value="Search" className="btn btn-success" />
+                <input
+                  type="submit"
+                  value="Search"
+                  className="btn btn-success"
+                />
               </form>
             </div>
           </div>

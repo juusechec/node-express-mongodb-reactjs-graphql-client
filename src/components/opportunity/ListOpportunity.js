@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import './List.css';
+import './ListOpportunity.css';
 import gql from 'graphql-tag';
 import { Query } from 'react-apollo';
 
@@ -15,7 +15,7 @@ const GET_SAVED_OPPORTUNITIES = gql`
   }
 `;
 
-class List extends Component {
+class ListOpportunity extends Component {
 
   render() {
     return (
@@ -64,4 +64,4 @@ class List extends Component {
   }
 }
 
-export default List;
+export default ListOpportunity;
