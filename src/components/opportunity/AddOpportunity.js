@@ -235,7 +235,9 @@ class AddOpportunity extends Component {
                     <Link to="/list" className="btn btn-success">
                       See saved opportunities
                     </Link>
-                    <br/><br/><br/>
+                    <br />
+                    <br />
+                    <br />
                   </div>
                 </div>
               </div>

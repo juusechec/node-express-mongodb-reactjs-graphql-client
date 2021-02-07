@@ -20,4 +20,20 @@ jobs:
         with:
           node-version: 12
       - run: npm ci
+      - run: npm run lint
+
+  super-test:
+    # Name the Job
+    name: Lint and Test code base
+    # Set the type of machine to run on
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checks out a copy of your repository on the ubuntu-latest machine
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 12
+      - run: npm ci
       - run: npm test

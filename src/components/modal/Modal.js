@@ -6,9 +6,7 @@ const Modal = ({ show, children }) => {
 
   return (
     <div className={showHideClassName}>
-      <div className="modal-container">
-        {children}
-      </div>
+      <div className="modal-container">{children}</div>
     </div>
   );
 };

@@ -62,7 +62,9 @@ class ShowOpportunity extends Component {
                         <form
                           onSubmit={(e) => {
                             e.preventDefault();
-                            removeSavedOpportunity({ variables: { id: data.savedOpportunity._id } });
+                            removeSavedOpportunity({
+                              variables: { id: data.savedOpportunity._id },
+                            });
                           }}
                         >
                           <Link
